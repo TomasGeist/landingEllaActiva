@@ -8,13 +8,19 @@ import img3 from './assets/img3.jpg'
 import img4 from './assets/img4.jpg'
 import izquierdaBarras from './assets/izquierdaBarras.png'
 import derechaBarras from './assets/derechaBarras.png'
+import emailjs from '@emailjs/browser';
+
 
 export default function Contacto() {
   const { width, height } = useScreenSize();
   let seccion;
   let imagen;
   let seccionFinal;
-
+ const sendEmail = (event) => {
+    event.preventDefault();
+    emailjs.sendForm('service_5tuiuj4','template_9xu2upk', event.target, 'zot4j_xCuY9vH6J7r').then(setEnviado('enviado')).catch(err=>console.log(err))
+    
+  }
 
   return (
     <>
@@ -30,12 +36,12 @@ export default function Contacto() {
                 <Col>
       <Form.Group className="mb-3" controlId="formBasicNombre">
         <Form.Label>Nombre</Form.Label>
-        <Form.Control autoComplete="off" type="text" placeholder="Escriba su nombre" />
+        <Form.Control name='name' autoComplete="off" type="text" placeholder="Escriba su nombre" />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicTelefono">
         <Form.Label>Telefono</Form.Label>
-        <Form.Control autoComplete="off" type="number" placeholder="Escriba su telefono" />
+        <Form.Control name='telefono' autoComplete="off" type="number" placeholder="Escriba su telefono" />
       </Form.Group>
         <Button style={{ color: 'white', width: 'auto', backgroundColor: '#f4770f', borderColor: '#21252930', borderRadius: '90px', width:'8em'}}>Enviar</Button>
             </Col>
@@ -46,12 +52,12 @@ export default function Contacto() {
                   
                   <Form.Group className="mb-3" controlId="formBasicApellido">
                 <Form.Label>Apellido</Form.Label>
-                <Form.Control autoComplete="off" type="text" placeholder="Escriba su apellido" />
+                <Form.Control name='apellido' autoComplete="off" type="text" placeholder="Escriba su apellido" />
                   </Form.Group>
                   
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email</Form.Label>
-                <Form.Control autoComplete="off" type="email" placeholder="Escriba su email" />
+                <Form.Control name='email' autoComplete="off" type="email" placeholder="Escriba su email" />
                   </Form.Group>
                   
                   

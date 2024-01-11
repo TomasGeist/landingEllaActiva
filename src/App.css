@@ -35,8 +35,11 @@
   font-weight: 800;
 }
 
+
+
 #root p{
   font-weight: 400;
+  font-family: sans-serif;
 }
 
 #root h4{

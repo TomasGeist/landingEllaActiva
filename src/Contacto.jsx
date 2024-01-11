@@ -25,7 +25,7 @@ export default function Contacto() {
             <div className='divContainIntSectionDer' style={{width:'75%'}}>
             <img className='imagenOculta' style={{position:'absolute', top:'-30px', left:'-2px', opacity:'0.1'}} src={izquierdaBarras}></img>
               <h2 style={{ position: 'relative' }}><span className='imagenOculta' style={{ fontSize: '8rem', position: 'absolute', left: '-10px', top: '-100px', color: '#21252930', fontWeight: 'bold', margin: '0px', padding: '0px' }}>05</span>Contacto</h2>
-              <Form data-netlify="true">
+              <Form name="contact" data-netlify="true">
               <Row>
                 <Col>
       <Form.Group className="mb-3" controlId="formBasicNombre">

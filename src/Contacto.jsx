@@ -18,7 +18,7 @@ export default function Contacto() {
 
   return (
     <>
-      <Row className='seccionContain' style={{ margin: '0px' }}>
+      <Row id='contacto' className='seccionContain' style={{ margin: '0px' }}>
           <Col lg='7' md='6' className={'seccionIzq imagen1'} style={{height:'60vh'}}></Col>
         
           <Col lg='5' md='6' className={'seccionDer '} style={{position:'relative', height:'70vh'}}>
@@ -30,12 +30,12 @@ export default function Contacto() {
                 <Col>
       <Form.Group className="mb-3" controlId="formBasicNombre">
         <Form.Label>Nombre</Form.Label>
-        <Form.Control autocomplete="off" type="text" placeholder="Escriba su nombre" />
+        <Form.Control autoComplete="off" type="text" placeholder="Escriba su nombre" />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicTelefono">
         <Form.Label>Telefono</Form.Label>
-        <Form.Control autocomplete="off" type="number" placeholder="Escriba su telefono" />
+        <Form.Control autoComplete="off" type="number" placeholder="Escriba su telefono" />
       </Form.Group>
         <Button style={{ color: 'white', width: 'auto', backgroundColor: '#f4770f', borderColor: '#21252930', borderRadius: '90px', width:'8em'}}>Enviar</Button>
             </Col>
@@ -46,12 +46,12 @@ export default function Contacto() {
                   
                   <Form.Group className="mb-3" controlId="formBasicApellido">
                 <Form.Label>Apellido</Form.Label>
-                <Form.Control autocomplete="off" type="text" placeholder="Escriba su apellido" />
+                <Form.Control autoComplete="off" type="text" placeholder="Escriba su apellido" />
                   </Form.Group>
                   
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email</Form.Label>
-                <Form.Control autocomplete="off" type="email" placeholder="Escriba su email" />
+                <Form.Control autoComplete="off" type="email" placeholder="Escriba su email" />
                   </Form.Group>
                   
                   

@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: 'https://geisetech.com.ar/',
+  base: '/landingEllaActiva/',
   optimizeDeps: {
     exclude: ['js-big-decimal'],
   }

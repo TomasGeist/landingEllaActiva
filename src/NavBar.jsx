@@ -26,28 +26,13 @@ export default function NavBar() {
               
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Geisetech
+                  Ella Activa
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <NavDropdown
-                    title="Servicios"
-                    id={`offcanvasNavbarDropdown-expand-${expand}`}
-                  >
-                    <NavDropdown.Item className='droptext' href="/contacto">Contacto</NavDropdown.Item>
-                    <NavDropdown.Item className='droptext' href="/planes">
-                      Planes
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item className='droptext' href="#action5">
-                      Página web Gratis
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                  <Nav.Link href="/blog">Blog</Nav.Link>
-                  <Nav.Link href="/nosotros">La empresa</Nav.Link>
-                  <Nav.Link href="/planes">Precios</Nav.Link>
-                  <Nav.Link href="#action2">FAQ</Nav.Link>
+                  <Nav.Link href="#contacto" >Contacto</Nav.Link>
+                  <Nav.Link href="#footer" >FAQ</Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

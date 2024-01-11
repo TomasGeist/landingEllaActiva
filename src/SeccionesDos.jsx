@@ -52,23 +52,31 @@ export default function Secciones({ dir , titulo , texto , btn, numero }) {
   (dir == 'izq') ?
     seccion =
    (
-    <>
+        <>
+           
         <Row className='seccionContain' style={{margin:'0px'}}>
-          <Col lg='7' md='6' className={'seccionIzq ' + imagen}></Col>
+           
+			   
+            <Col lg='7' md='6' className={'seccionIzq ' + imagen}></Col>
+                     
+      
             <Col lg='5' md='6' className='seccionDer'>
             <div className='divContainIntSectionDer' style={{width:'75%'}}>
   
                 <h2 style={{ position: 'relative' }}><span className={(width<895)?'imagenOculta':null} style={{ fontSize: '8rem', position: 'absolute', left: '-10px', top: '-100px', color: '#21252930', fontWeight: 'bold', margin: '0px', padding: '0px' }}>{numero}</span>{titulo}</h2>
                 <p>{texto}</p>
               <Button style={{ color: 'white', width: 'auto', backgroundColor: '#f4770f', borderColor: '#21252930', borderRadius: '90px', width:'8em'}}>Saber Más</Button>
-              </div>
+                    </div>
+                    
           </Col>
-        </Row>
+              </Row>
+       
     </>
    )
     
     : seccion = (
-      <>
+        <>
+   
        <Row className='seccionContain' style={{margin:'0px'}}>
           <Col lg='7' md='6' className={'seccionDer '} style={{position:'relative'}}>
             <div className='divContainIntSectionDer' style={{width:'75%'}}>
@@ -79,7 +87,8 @@ export default function Secciones({ dir , titulo , texto , btn, numero }) {
               </div>
           </Col>
           <Col lg='5' md='6' className={'seccionIzq ' + imagen}></Col>
-        </Row>
+              </Row>
+   
     </>
     )
   

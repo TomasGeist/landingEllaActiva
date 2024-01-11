@@ -43,7 +43,7 @@ export default function Contacto() {
         <Form.Label>Telefono</Form.Label>
         <Form.Control name='telefono' autoComplete="off" type="number" placeholder="Escriba su telefono" />
       </Form.Group>
-        <Button style={{ color: 'white', width: 'auto', backgroundColor: '#f4770f', borderColor: '#21252930', borderRadius: '90px', width:'8em'}}>Enviar</Button>
+        <Button type="submit" style={{ color: 'white', width: 'auto', backgroundColor: '#f4770f', borderColor: '#21252930', borderRadius: '90px', width:'8em'}}>Enviar</Button>
             </Col>
              
                 

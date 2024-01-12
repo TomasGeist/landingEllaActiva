@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import useScreenSize from './hooks/useScreenSize';
-
+import logo from './assets/logo-ellaactiva.png'
 export default function NavBar() {
   const { width, height } = useScreenSize();
   return (
@@ -16,7 +16,9 @@ export default function NavBar() {
       {['false'].map((expand) => (
         <Navbar fixed="top" style={{backgroundColor: '#ff520000', animation:'fade-down 0.5s'}} key={expand} expand={expand} className="mb-3 navbarControl">
           <Container fluid>
-            <Navbar.Brand href="/"><p>Ellaactiva</p></Navbar.Brand>
+            <Navbar.Brand  href="/"><img  src={logo}
+              width="150"
+              className="d-inline-block align-top" /></Navbar.Brand>
             <Navbar.Toggle  aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas style={{backgroundColor: '#f5f5f5'}}
               id={`offcanvasNavbar-expand-${expand}`}
@@ -26,7 +28,9 @@ export default function NavBar() {
               
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Ella Activa
+                  <img  src={logo}
+              width="150"
+              className="d-inline-block align-top" />
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>

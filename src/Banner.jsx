@@ -17,7 +17,7 @@ export default function Banner() {
           
             
             <h1 style={{ fontWeight: 'bold', color: 'black', textAlign: (width < 737) ? 'center' : 'start', wordWrap: 'break-word', fontSize: (width < 1243 && width > 993) ? '2.3rem' : '2.8rem'  }} className='mt-5'><span style={{ backgroundColor: '#ff52006b', paddingLeft: '2px', padding: '0px 6px', animation:'fade-down 0.5s'}}>Pilates</span> para Equilibrio Interior</h1>
-              <Button  style={{ color: 'black', width: 'auto', backgroundColor: 'transparent', borderColor: 'black', borderRadius: '90px', width:'8em'}} className='mbLandscape mt-5' >Leer más</Button>
+              <Button  style={{ color: 'black', width: 'auto', backgroundColor: 'transparent', borderColor: 'black', borderRadius: '90px', width:'8em'}} className='mbLandscape mt-5' ><a href='#section01' style={{color:'black'}}>Leer más</a></Button>
               
           
           

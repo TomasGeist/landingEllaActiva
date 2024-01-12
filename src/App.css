@@ -184,9 +184,26 @@ color: black;
   }
 }
 
+#root a{
+  text-decoration: none;
+  color: white;
+}
 
 .carrusel img{
   width: 150px;
   height: 150px;
   padding: 3px;
+}
+
+.rowRedes a{
+  display: flex;
+  width: 33%;
+}
+
+.rowRedes a img{
+ width: 2.5rem
+}
+
+.imgfooterLogo{
+  
 }

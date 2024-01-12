@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 import useScreenSize from './hooks/useScreenSize';
 import pilatesBanner from './assets/pilatesBanner.jpg'
@@ -18,10 +18,17 @@ import fimg6 from './assets/ellaactiva/6.jpg'
 import fimg7 from './assets/ellaactiva/7.jpg'
 import fimg8 from './assets/ellaactiva/8.jpg'
 import fimg9 from './assets/ellaactiva/9.jpg'
-
+import face from './assets/facesvg.svg'
+import insta from './assets/instasvg.svg'
+import wsp from './assets/wspsvg.svg'
+import logo from './assets/logo-ellaactiva.png'
 
 
 export default function Footer() {
+  const [opcion, setOpcion] = useState(false)
+  const [placehnew, setPlacehnew] = useState(null)
+
+
   const { width, height } = useScreenSize();
   let seccion;
   let imagen;
@@ -30,15 +37,22 @@ export default function Footer() {
   return (
     <>
     <Row id='footer' className='seccionContain bg-black ' style={{margin:'0px', color:'white', width:'100%'}}>
-        <Col lg='4' md='2' className='footerInfo mb-3 mt-3'>
+        <Col lg='4' md='3' className='footerInfo mb-3 mt-3'>
           <div className='footerInfoint'>
-          <p>EllaActiva</p>
+          <img src={logo}
+              width="130"
+              className="d-inline-block align-top mb-3" />
           <p><b>Direccion: </b> Luis Tilo Bartolome 657</p>
           <p><b>Telefono: </b>+54 9 343 404-8193</p>
             <p><b>Email: paolaheit@gmail.com</b></p>
+            <Row className='rowRedes' style={{alignSelf:'center'}}>
+              <a target='_blank' href='https://web.facebook.com/paola.heit.94'><img src={face} alt="" /></a>
+              <a target='_blank' href='https://api.whatsapp.com/send/?phone=5493434048193&text&type=phone_number&app_absent=0'><img src={wsp} alt="" /></a>
+              <a target='_blank' href='https://www.instagram.com/ellaactiva/'><img src={insta} alt="" /></a>
+            </Row>
             </div>
         </Col>
-        <Col lg='4' md='8' sm='12' className='galeriaFooter mb-3 mt-3'>
+        <Col lg='4' md='7' sm='12' className='galeriaFooter mb-3 mt-3'>
           <h3>Galeria de Imagenes</h3>
           <Row className="justify-content-lg-center justify-content-md-center justify-content-sm-center">
             <Carousel className='carrusel'>
@@ -75,9 +89,13 @@ export default function Footer() {
           <Form style={{ gap:'5px', display: 'flex', padding: '0px', margin:'0px'}}>
       <Form.Group style={{ alignSelf:'center'}}  className="mb-3" controlId="formBasicEmail">
         
-              <Form.Control  type="email" placeholder="Ingresa email" />
+              <Form.Control disabled={opcion} autoComplete='off'  type="email" placeholder='Ingrese su email' value={placehnew} />
       </Form.Group>
-      <Button style={{height:'2.4rem'}} variant="primary" type="submit">
+            <Button onClick={(e) => {
+              e.preventDefault()
+              setPlacehnew('Enviado con exito')
+              setOpcion(true)
+            }} disabled={opcion} style={{ height: '2.4rem'}} variant="primary" type="submit">
         Enviar
               </Button>
                 

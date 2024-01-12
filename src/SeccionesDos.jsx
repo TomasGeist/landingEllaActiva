@@ -38,7 +38,7 @@ export default function Secciones({ dir , titulo , texto , btn, numero }) {
             <div className='divContainIntSectionDer' style={{ width: '75%' }}>
             <h2 style={{position:'relative'}}><span className={(width<895)?'imagenOculta':null} style={{ fontSize: '8rem', position: 'absolute', left: '-10px', top: '-100px', color: '#21252930', fontWeight: 'bold', margin: '0px', padding: '0px' }}>{numero}</span>{titulo}</h2>
               <p>{texto}</p>
-              <Button style={{ color: 'white', width: 'auto', backgroundColor: '#f4770f', borderColor: '#21252930', borderRadius: '90px', width:'8em'}}>Saber Más</Button>
+              <Button href='#contacto' style={{ color: 'white', width: 'auto', backgroundColor: '#f4770f', borderColor: '#21252930', borderRadius: '90px', width:'8em', zIndex:'2'}}><a href='#contacto'>Saber Más</a></Button>
               </div>
           </Col>
         </Row>
@@ -54,7 +54,7 @@ export default function Secciones({ dir , titulo , texto , btn, numero }) {
    (
         <>
            
-        <Row className='seccionContain' style={{margin:'0px'}}>
+          <Row id={'section' + numero} className='seccionContain' style={{margin:'0px'}}>
            
 			   
             <Col lg='7' md='6' className={'seccionIzq ' + imagen}></Col>
@@ -65,7 +65,7 @@ export default function Secciones({ dir , titulo , texto , btn, numero }) {
   
                 <h2 style={{ position: 'relative' }}><span className={(width<895)?'imagenOculta':null} style={{ fontSize: '8rem', position: 'absolute', left: '-10px', top: '-100px', color: '#21252930', fontWeight: 'bold', margin: '0px', padding: '0px' }}>{numero}</span>{titulo}</h2>
                 <p>{texto}</p>
-              <Button style={{ color: 'white', width: 'auto', backgroundColor: '#f4770f', borderColor: '#21252930', borderRadius: '90px', width:'8em'}}>Saber Más</Button>
+              <Button href='#contacto' style={{ color: 'white', width: 'auto', backgroundColor: '#f4770f', borderColor: '#21252930', borderRadius: '90px', width:'8em', zIndex:'2'}}><a href='#contacto'>Saber Más</a></Button>
                     </div>
                     
           </Col>
@@ -83,7 +83,7 @@ export default function Secciones({ dir , titulo , texto , btn, numero }) {
             <img className={(width<895)?'imagenOculta':null} style={{position:'absolute', top:'-30px', left:'-2px', opacity:'0.1'}} src={izquierdaBarras}></img>
               <h2 style={{ position: 'relative' }}><span className={(width<895)?'imagenOculta':null} style={{ fontSize: '8rem', position: 'absolute', left: '-10px', top: '-100px', color: '#21252930', fontWeight: 'bold', margin: '0px', padding: '0px' }}>{numero}</span>{titulo}</h2>
               <p>{texto}</p>
-              <Button style={{ color: 'white', width: 'auto', backgroundColor: '#f4770f', borderColor: '#21252930', borderRadius: '90px', width:'8em'}}>Saber Más</Button>
+              <Button style={{ color: 'white', width: 'auto', backgroundColor: '#f4770f', borderColor: '#21252930', borderRadius: '90px', width:'8em', zIndex:'2'}}><a href='#contacto'>Saber Más</a></Button>
               </div>
           </Col>
           <Col lg='5' md='6' className={'seccionIzq ' + imagen}></Col>
